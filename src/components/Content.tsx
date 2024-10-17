@@ -241,7 +241,6 @@ findAmountSevereFloods();
       setActiveCounty('');
       setActiveSeverity('');
       setActiveSeverityLevel(0);
-
       setWindowVisibility('none');
 
    }
