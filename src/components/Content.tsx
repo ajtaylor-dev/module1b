@@ -94,7 +94,7 @@ export default function Content() {
    const [activeSeverityLevel, setActiveSeverityLevel] = useState(0);
 
    function findAmountFloodAlerts() {
-      axios.get('http://environment.data.gov.uk/flood-monitoring/id/floods')
+      axios.get('https://environment.data.gov.uk/flood-monitoring/id/floods')
       .then(response => {
          /* SORT RESULTS TO SHOW FLOOD ALERTS ONLY */
          let floodAlerts: Array<any>[] = [];
@@ -110,7 +110,7 @@ export default function Content() {
 }
 
 function findAmountFloodWarnings() {
-   axios.get('http://environment.data.gov.uk/flood-monitoring/id/floods')
+   axios.get('https://environment.data.gov.uk/flood-monitoring/id/floods')
    .then(response => {
       /* SORT RESULTS TO SHOW FLOOD ALERTS ONLY */
       let floodWarnings: Array<any>[] = [];
@@ -126,7 +126,7 @@ function findAmountFloodWarnings() {
 }
 
 function findAmountSevereFloods() {
-   axios.get('http://environment.data.gov.uk/flood-monitoring/id/floods')
+   axios.get('https://environment.data.gov.uk/flood-monitoring/id/floods')
    .then(response => {
       /* SORT RESULTS TO SHOW FLOOD ALERTS ONLY */
       let severeFloods: Array<any>[] = [];
@@ -146,7 +146,7 @@ findAmountFloodWarnings();
 findAmountSevereFloods();
 
    const showSevereFlood = () => {
-      axios.get('http://environment.data.gov.uk/flood-monitoring/id/floods')
+      axios.get('https://environment.data.gov.uk/flood-monitoring/id/floods')
       .then(response => {
          /* SEVERE FLOODS ONLY */
          let filteredResult: Array<any>[] = [];
@@ -168,7 +168,7 @@ findAmountSevereFloods();
    }
 
    const showFloodWarning = () => {
-      axios.get('http://environment.data.gov.uk/flood-monitoring/id/floods')
+      axios.get('https://environment.data.gov.uk/flood-monitoring/id/floods')
       .then(response => {
          /* FLOOD WARNINGS ONLY */
          let filteredResult: Array<any>[] = [];
@@ -189,7 +189,7 @@ findAmountSevereFloods();
    }
 
    const showFloodAlerts = () => {
-      axios.get('http://environment.data.gov.uk/flood-monitoring/id/floods')
+      axios.get('https://environment.data.gov.uk/flood-monitoring/id/floods')
       .then(response => {
          /* FLOOD ALERTS ONLY */
          let filteredResult: Array<any>[] = [];
